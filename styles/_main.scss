@@ -1,0 +1,74 @@
+@use 'sass:math';
+
+// HEADING
+@mixin font-heading {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    /* identical to box height, or 110% */
+    text-align: center;
+    letter-spacing: -0.8px;
+    color: #FFFFFF;
+}
+
+$medium-heading-size: 72px;
+$medium-headning-line-height: 83px;
+
+$large-heading-size: 84px;
+$large-heading-line-height: 102px;
+
+// TEXT
+@mixin font-text {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    /* or 150% */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+$medium-text-size: 22px;
+$medium-text-line-height: 33px;
+
+$large-text-size: 22px;
+$large-text-line-height: 34px;
+
+.main-info {   
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    &__heading {
+        margin-top: 3em;
+        margin-bottom: 0.5em;
+        @include font-heading;
+        // align-self: center;
+    }
+    
+    &__text {
+        max-width: math.div(211px, 320px) * 100%;
+        width: 100%;
+        @include font-text;
+        // align-self: center;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1100px) {
+    .main-info__heading {        
+        font-size: $medium-heading-size;
+        line-height: $medium-headning-line-height;
+    }
+}
+
+@media screen and (min-width: 1101px) {
+    .main-info {
+        align-self: flex-start;
+        &__heading {
+            font-size: $large-heading-size;
+            line-height: large-heading-line-height;
+        }
+    }
+}
