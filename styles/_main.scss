@@ -2,7 +2,7 @@
 
 // HEADING
 @mixin font-heading {
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -21,7 +21,7 @@ $large-heading-line-height: 102px;
 
 // TEXT
 @mixin font-text {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -45,14 +45,14 @@ $large-text-line-height: 34px;
         margin-top: 2em;
         margin-bottom: 0.5em;
         @include font-heading;
-        align-self: center;
+        // align-self: center;
     }
     
     &__text {
         max-width: math.div(211px, 320px) * 100%;
         width: 100%;
         @include font-text;
-        align-self: center;
+        // align-self: center;
     }
 }
 
@@ -65,10 +65,28 @@ $large-text-line-height: 34px;
 
 @media screen and (min-width: 1101px) {
     .main-info {
+        max-width: 600px;
+        width: 100%;
+        margin-left: 50px;
         align-self: flex-start;
         &__heading {
+            margin-left: 50px;
             font-size: $large-heading-size;
-            line-height: large-heading-line-height;
+            line-height: $large-heading-line-height;
+            text-align: left;
+            align-self: flex-start;
         }
+
+        &__text {
+            margin-left: 50px;
+            font-size: $large-text-size;
+            line-height: $large-text-line-height;
+            text-align: left;
+            align-self: flex-start;
+        }
+    }    
+
+    .picture-section {
+        transform: translateY(-10%);
     }
 }
