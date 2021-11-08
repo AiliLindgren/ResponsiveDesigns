@@ -45,14 +45,12 @@ $large-text-line-height: 34px;
         margin-top: 2em;
         margin-bottom: 0.5em;
         @include font-heading;
-        // align-self: center;
     }
     
     &__text {
         max-width: math.div(211px, 320px) * 100%;
         width: 100%;
         @include font-text;
-        // align-self: center;
     }
 }
 
