@@ -66,6 +66,10 @@ header {
 }
 
 @media screen and (min-width: 501px) {
+    .logo:hover, a:hover {
+        color: blue;
+    }
+
     ul {
         width: 280px;
         margin-right: 2em;
