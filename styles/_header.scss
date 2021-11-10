@@ -95,6 +95,10 @@ header {
             @include font-logo-large-screen;
         }
 
+        .logo:hover {
+            color: blue;
+        }
+
         ul {
             transform: translateX(-3%);
             justify-content: space-around;
